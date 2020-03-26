@@ -21,16 +21,11 @@ z_function <- function(mreg_data, network){
     if (length(module_sp) > 1) {
       diag(module_network) <- 0
       
-      # kis is number of links of i to other species in its own module
-      #binary
-      #ks <- rowSums(module_network != 0) + colSums(module_network != 0)
-      #kis <- ks[names(ks) == mreg$mreg]
-      
-      #quantitative
+      # kis is number of links of i to other microreg in its own module
       ks <- rowSums(module_network) + colSums(module_network)
       kis <- ks[names(ks) == mreg$mreg]
       
-      # AVEks and SDks are average and st dev of within-module k of all           # species in module s
+      # AVEks and SDks are average and st dev of within-module k of all microreg in module s
       AVEks <- mean(ks)
       SDks <- sd(ks)
       
@@ -51,7 +46,7 @@ c_function <- function(mreg_data, network){
   NM <- max(mreg_data$module)
   network <- as.matrix(network)
   diag(network) <- 0
-  #ki <- rowSums(network != 0) + colSums(network != 0)
+  
   ki <- rowSums(network) + colSums(network)
   
   for (i in 1:nrow(network)) {
@@ -70,10 +65,7 @@ c_function <- function(mreg_data, network){
       
       if (length(module_sp) > 1) {
         diag(module_network) <- 0
-        #kit <- rowSums(module_network != 0) + colSums(module_network != 0)
-        #second_term <- c(second_term, (kit[names(kit) == mreg$mreg]/ki[names(ki) == mreg$mreg])^2)} 
         
-        #quantitative
         kit <- rowSums(module_network) + colSums(module_network)
         second_term <- c(second_term, (kit[names(kit) == mreg$mreg]/ki[names(ki) == mreg$mreg])^2)} 
       
