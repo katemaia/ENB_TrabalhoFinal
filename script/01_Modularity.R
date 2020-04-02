@@ -10,7 +10,6 @@ library(RColorBrewer)
 dir("./script")
 source("./script/aux_func_C&Z.R")
 
-
 # Leitura dos dados ---------------------------------------------
 dir("./data")
 
@@ -18,12 +17,14 @@ network <- read.table("./data/network_MG.txt", header = TRUE, sep = "\t", check.
 class(network)
 dim(network)
 all(rownames(network) == colnames(network))
+all(rowSums(network) == colSums(network))
+any(is.na(network))
 
 coords <- read.table("./data/microreg_coords_MG.csv", header = TRUE, sep = ",", check.names = FALSE)
 
 # Analise de modularidade da rede ---------------------------------------------
 
-graph <- graph_from_adjacency_matrix(as.matrix(network), weighted = T, mode = "directed")
+graph <- graph_from_adjacency_matrix(as.matrix(network), weighted = T, mode = "undirected")
 all(V(graph)$name == rownames(network)) # vertex of graph in the same order as matrix row/col
 
 M <- cluster_optimal(graph, weights = E(graph)$weight)
@@ -33,9 +34,9 @@ mreg_data <- data.frame(mreg = V(graph)$name, module = M$membership)
 
 # Analise de c & z das microrregioes ---------------------------------------------
 
-mreg_data$c <- c_function(mreg_data, network)
+mreg_data$c <- c_function(mreg_data, network) # aux_function
 
-mreg_data$z <- z_function(mreg_data, network)
+mreg_data$z <- z_function(mreg_data, network) # aux_function
 
 # write.table(mreg_data, "./output/01_Microreg_C&Z.txt", row.names = FALSE)
 
