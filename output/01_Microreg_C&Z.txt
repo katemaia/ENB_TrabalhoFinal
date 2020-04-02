@@ -1,0 +1,67 @@
+"mreg" "module" "c" "z"
+"Aimorés" 1 0.5421 -0.8235
+"Belo Horizonte" 2 0.7853 1.9084
+"Caratinga" 3 0.3262 0.8467
+"Cataguases" 4 0.4902 -0.2966
+"Governador Valadares" 3 0.2884 1.6068
+"Ipatinga" 3 0.3454 1.6919
+"Itabira" 3 0.4992 0.8826
+"Manhuaçu" 1 0.429 1.6805
+"Ouro Preto" 1 0.6995 0.0112
+"Alfenas" 5 0.5335 -0.2131
+"Andrelândia" 6 0.5329 -1.0248
+"Itaguara" 2 0.4706 -0.6676
+"Juiz de Fora" 4 0.5232 0.8316
+"Oliveira" 6 0.6451 -0.544
+"Passos" 5 0.5538 -1.4243
+"Poços de Caldas" 5 0.1782 0.482
+"Santa Rita do Sapucaí" 5 0.263 0.8708
+"São Lourenço" 6 0.4958 0.7844
+"São Sebastião do Paraíso" 5 0.3561 -1.2544
+"Varginha" 6 0.569 1.6188
+"Almenara" 3 0.2481 -0.8719
+"Araçuaí" 3 0.4742 -0.8283
+"Nanuque" 3 0.2617 -0.7502
+"Pedra Azul" 3 0.4377 -0.8619
+"Salinas" 7 0.6388 -0.8821
+"Teófilo Otoni" 3 0.2881 -0.1538
+"Barbacena" 4 0.2904 0.0796
+"São João Del Rei" 4 0.6078 -1.4034
+"Capelinha" 7 0.5679 -0.4428
+"Curvelo" 7 0.3628 2.0739
+"Diamantina" 7 0.3678 0.1571
+"Guanhães" 3 0.3965 -0.0535
+"Montes Claros" 7 0.3618 1.4342
+"Peçanha" 3 0.3948 -0.4867
+"Sete Lagoas" 7 0.5172 0.9575
+"Araxá" 8 0.6253 0.3398
+"Bom Despacho" 2 0.3169 0.1006
+"Campo Belo" 6 0.7014 -0.6042
+"Divinópolis" 2 0.3108 1.3732
+"Formiga" 2 0.4621 -0.2857
+"Ituiutaba" 8 0.2091 -1.2538
+"Lavras" 6 0.6001 -0.2302
+"Pará de Minas" 2 0.3504 -0.0448
+"Paracatu" 8 0.6079 -0.8989
+"Patos de Minas" 8 0.5077 0.2101
+"Patrocínio" 8 0.3084 1.0406
+"Piuí" 2 0.5219 -0.6787
+"Uberaba" 8 0.2971 0.2101
+"Uberlândia" 8 0.4336 1.4549
+"Conselheiro Lafaiete" 4 0.4578 -0.259
+"Muriaé" 1 0.6415 -0.6798
+"Ubá" 4 0.3178 1.6703
+"Viçosa" 4 0.4906 -0.6225
+"Conceição do Mato Dentro" 2 0.6247 -0.9484
+"Pirapora" 7 0.5905 -0.5959
+"Três Marias" 2 0.4988 -0.757
+"Unaí" 7 0.5686 -0.9055
+"Bocaiúva" 7 0.4163 -0.1753
+"Janaúba" 7 0.427 -0.375
+"Januária" 7 0.2715 -0.0736
+"Ponte Nova" 1 0.7062 -0.1884
+"Frutal" 8 0.0599 -1.103
+"Mantena" 3 0.1373 -1.0218
+"Grão Mogol" 7 0 -1.1725
+"Itajubá" 5 0.2643 0.4714
+"Pouso Alegre" 5 0.138 1.0676

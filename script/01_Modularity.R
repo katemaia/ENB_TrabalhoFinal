@@ -37,8 +37,31 @@ mreg_data$c <- c_function(mreg_data, network)
 
 mreg_data$z <- z_function(mreg_data, network)
 
+# write.table(mreg_data, "./output/01_Microreg_C&Z.txt", row.names = FALSE)
+
 # Plot rede rodoviaria de Minas Gerais -------------------------------------------
 
-display.brewer.pal(8, "Dark2")
-display.brewer.pal(8, "Set3")
+nmod <- max(M$membership)
 
+display.brewer.pal(nmod, "Dark2")
+display.brewer.pal(nmod, "Set3")
+colors.pal <- brewer.pal(nmod, "Dark2")
+
+posit <- match(row.names(network), coords[,1]) # position os microreg in coords
+layout <- as.matrix(coords[posit, c(3,4)])
+
+E(graph)$arrow.size <- 0.2
+V(graph)$name <- as.character(coords[match(V(graph)$name, coords$microreg), "code"])
+V(graph)$color <- colors.pal[M$membership]
+
+graph <- simplify(graph, remove.multiple = F, remove.loops = T) # no self loop  
+
+#pdf("./figure/MG_Road_Network.pdf")
+par(mfrow = c(1,1), mar = c(1,1,1,1))
+plot.igraph(graph, layout = layout, asp = 0,
+     vertex.size = log(colSums(network) + rowSums(network)), 
+     vertex.color = V(graph)$color,
+     edge.width = log(E(graph)$weight, 20), arrow.mode = 0)
+#dev.off
+
+# Plot c & z microrregioes ------------------------------------------------------
