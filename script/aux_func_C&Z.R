@@ -1,6 +1,6 @@
 
-##### Funcoes que usam os resultados de membership (M) para calcular c & z  ##### 
-# Objetivo: Funcoes auxiliares - que eu ja havia implementado - que calculam os valores de c (among-module connectivity) e z (within-module degree) para cada no - microrregiao - da rede de rotas rodoviarias de MG.
+# Funcoes auxiliares que usam os resultados de "module membership" para calcular c & z # 
+# Objetivo: Funcoes auxiliares que calculam os valores de c (among-module connectivity) e z (within-module degree) para cada microrregiao da rede de rotas rodoviarias de MG.
 # Autora: Kate Pereira Maia
 # Data: 24/03/2020
 
